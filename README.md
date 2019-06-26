@@ -1,24 +1,12 @@
-# README
+# Run app locally
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+# start redis server
+redis-server
 
-Things you may want to cover:
+# start sidekiq
+bundle exec sidekiq
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# run ExampleJob
+ExampleJob.perform_later User.first
+```
